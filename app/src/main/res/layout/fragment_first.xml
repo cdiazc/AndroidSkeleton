@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".presentation.fragments.FirstFragment">
+
+    <data>
+
+        <import type="android.view.View"/>
+        
+        <variable name="city" type="String" />
+        <variable name="region" type="String" />
+        <variable name="loading" type="Boolean" />
+    </data>
+    
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/purple_200"
+            android:visibility="@{loading? View.VISIBLE : View.GONE, default = gone}">
+            
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:text="LOADING"/>
+            
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+    
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{city}" />
+    
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{region}" />
+    
+            <Button
+                android:id="@+id/fragment_first_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="PRESS ME"/>
+    
+        </LinearLayout>
+
+    </FrameLayout>
+</layout>
