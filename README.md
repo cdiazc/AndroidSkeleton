@@ -1,2 +1,2 @@
 # AndroidSkeleton
-Kotlin + Flow + State + DI + MVVM
+Kotlin + Flow + Ui State + Hilt + MVVM
